@@ -1,0 +1,174 @@
+/* USE AS MASTER FOR THIS STYLE ---------------------------------------------------
+
+This is a design from the simple CSS Responsive Header & NAV named trueblue.css
+
+with help from: http://blog.teamtreehouse.com/create-an-absolute-basic-mobile-css-responsive-navigation-menu4
+
+This html must be included in <body>, or responsibly changed from within:
+
+	<header>
+		<a href="#" id="logo"></a>
+			<nav>
+				<a href="#" id="menu_icon"></a>
+				<ul>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Projects</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Help</a></li>
+				</ul>
+			</nav>
+	</header>
+
+*/
+
+header { /* make FIXED and TOP LEFT 0 0 and Z INDEX */
+	height: 89px;
+	width: 100%;
+	position: absolute;
+		top: 0;
+		left: 0;
+	background: white;
+	border-bottom: 1px solid green;
+    box-shadow: 0px 1px 25px #555;
+	z-index: 1;
+}
+
+#logo { /* make float left and give MARGIN */
+    float: left;
+    position: absolute;
+    left: 30%;
+    top: 20%;
+	margin: 0 auto /* 10px */;
+	width: 300px;
+	height: 4.3125em; /* 69px */
+	background: none;
+	background-position: 0% -2%;
+	background-size: 200px 138px;
+	overflow: hidden;
+	border-radius: 15px 0 15px 0;
+    color: green;
+    font-size: 3em;
+    transition: all 1s ease-out;
+}
+
+#logo:hover { /* make float left and give MARGIN */
+		background-position: 0 100%;
+
+}
+
+/*make sure image is 100% */
+nav img {
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #aaa;
+	font-weight: bold;
+}
+
+/* HOVER CHANGES ARE ON LI 
+a:hover {
+	color: blue;
+} */
+
+/* -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+														MENU STYLES HERE
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+nav { /* make float RIGHT and give padding */
+	float: right;
+	position: relative;
+	padding: 1.5625em; /* 25px/16 */
+}
+
+nav ul { /* make pretty */
+	list-style: none;
+}
+
+nav ul li { /* make float LEFT and give padding, this is a BLOCK element */
+	display: inline-block;
+	float: left;
+	padding: 10px;
+            transition: all 1s ease-in-out;
+}
+
+#menu_icon {
+	width: 50px;
+	height: 350px;
+    margin: 400px 0 0 0;
+	border-radius: 15px 0 15px 0;
+	background: green url('/images/bubbles.png') no-repeat;
+    background-position: bottom;
+	overflow:hidden;
+    font-size: 2em;
+    text-alighn: center;
+    color: white;
+    transition: all .3s ease-in-out;
+}
+
+a#menu_icon:hover { /* the two names a:hover and #menu_icon must be connected bc it is an Anchor tag with an ID of #menu_icon */
+	background: white url('/images/bubbles.png') no-repeat;
+	background-position: top;
+    transition: all .3s ease-in-out;
+}	
+
+nav li:hover a {
+	color: green;
+    
+}
+
+/* -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+														MEDIA QUERIES HERE
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (max-width: 770px) {
+	
+	header { /* make header ABSOLUTE to allow for scrolling */
+		position: fixed;
+	}
+	nav {
+		right: 0px;
+                transition: all 1s ease-in-out;
+	}
+    #logo {
+        left: 30px;
+        top: 30%;
+        font-size: 2em;
+        transition: all 1s ease-in-out;
+    }
+	#menu_icon { /* make display INLINE-BLOCK */
+        height: 50px;
+        margin: 0 0 0 0;
+		display: inline-block;
+		overflow: hidden;
+		transition: all .3s ease-in-out;
+		}
+	
+	nav ul, nav:active ul { /* make display off but ABSOLUTE positioned, then define its width and position on screen, then whatever pretty stuff like borders */
+		display: none;
+		position: absolute;
+		width: 400%;
+		right: 0;
+		top: 60%;
+		background: white;
+		border-radius: 0px;
+		border: 2px solid green;
+		z-index: 100;
+        transition: all .7s ease-out;
+	}
+	
+	nav:hover ul { /* this is a BLOCK element now, and corresponding to the commmand ^^ */
+		display: block;
+        transition: all .8s ease-out;
+	}
+	
+	nav li { /* align the text, specify width100%, then padding n margin in the way you want it */
+		text-align: center;
+		width: 100%;
+		padding: 50px 0;
+		margin: 0;
+        transition: all 1s ease-in-out;
+	}
+}

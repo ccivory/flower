@@ -1,0 +1,49 @@
+@media screen and (max-width: 770px) {
+	
+	header { /* make header ABSOLUTE to allow for scrolling */
+		position: fixed;
+	}
+	nav {
+		right: 0px;
+                transition: all 1s ease-in-out;
+	}
+    #logo {
+        left: 30px;
+        top: 30%;
+        font-size: 2em;
+        transition: all 1s ease-in-out;
+    }
+	#menu_icon { /* make display INLINE-BLOCK */
+        height: 50px;
+        margin: 0 0 0 0;
+		display: inline-block;
+		overflow: hidden;
+		transition: all .3s ease-in-out;
+		}
+	
+	nav ul, nav:active ul { /* make display off but ABSOLUTE positioned, then define its width and position on screen, then whatever pretty stuff like borders */
+		display: none;
+		position: absolute;
+		width: 400%;
+		right: 0;
+		top: 60%;
+		background: white;
+		border-radius: 0px;
+		border: 2px solid green;
+		z-index: 100;
+        transition: all .7s ease-out;
+	}
+	
+	nav:hover ul { /* this is a BLOCK element now, and corresponding to the commmand ^^ */
+		display: block;
+        transition: all .8s ease-out;
+	}
+	
+	nav li { /* align the text, specify width100%, then padding n margin in the way you want it */
+		text-align: center;
+		width: 100%;
+		padding: 50px 0;
+		margin: 0;
+        transition: all 1s ease-in-out;
+	}
+}

@@ -1,0 +1,63 @@
+.container>span {
+    margin-top: 50px;
+}
+
+.col {
+    background: white;
+    color: black;
+    border: 0px solid black;
+    padding: 30px;
+    margin: 0px 60px 10px 0px;
+    float: left;
+    width: 26.15%;
+    border-right: 0px solid #ddd;
+}
+
+
+.colcenter {
+    background: white;
+    color: black;
+    border: 0px solid black;
+    padding: 30px;
+    margin: 0 auto;
+    width: 26.15%;
+    border-left: 0px solid #ddd;
+}
+
+.colright {
+    background: white;
+    color: black;
+    border: 0px solid black;
+    padding: 30px;
+    margin: 0px 0px 10px 0px;
+    float: right;
+    width: 26.15%;
+    border-left: 0px solid #ddd;
+}
+
+.container {
+    background: white;
+    position: relative;
+    top: 90%; /* LAYOUT SPECIFIC -- FOR SCROLLING */
+    height: 30em; /* LAYOUT SPECIFIC -- FOR SCROLLING */
+    padding: 0px 0 0 0;
+    opacity: 1;
+    filter: alpha(opacity=1);
+    max-width: 100%;
+}
+
+.circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background: none;
+    border: 1px solid green;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+}
+
+.circle:hover {
+    background: green;
+}
+    

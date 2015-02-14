@@ -1,0 +1,31 @@
+.col4 {
+    background: #444;
+    color: white;
+    border: 0px solid black;
+    padding: 10px 10px 10px 10px;
+    margin: 0px 0 0 0;
+    float: left;
+    width: 20.15%;
+}
+
+footer {
+    background: #444;
+    position: relative;
+    top: 90%; /* LAYOUT SPECIFIC -- FOR SCROLLING */
+    height: 9em; /* LAYOUT SPECIFIC -- FOR SCROLLING */
+    padding: 0px 0 0 0;
+    opacity: 1;
+    filter: alpha(opacity=1);
+    width: 100%;
+}
+
+.constrict {
+    background: #444;
+    top: 90%; /* LAYOUT SPECIFIC -- FOR SCROLLING */
+    height: 9em; /* LAYOUT SPECIFIC -- FOR SCROLLING */
+    padding: 0px 0 0 0;
+    opacity: 1;
+    filter: alpha(opacity=1);
+    margin: 0 auto;
+    width: 770px;
+}
